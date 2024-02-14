@@ -1,0 +1,34 @@
+.logo {
+	display: block;
+	width: fit-content;
+	font-weight: 700;
+	line-height: 12px;
+	text-decoration: none;
+	height: 45px;
+
+	& span {
+		display: block;
+	}
+
+	& span:first-child {
+		font-size: 20px;
+		color: #000000;
+
+		&::after {
+			content: '';
+			display: inline-block;
+			width: 20px;
+			height: 14px;
+			background-image: url(../../img/flag.png);
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: contain;
+		}
+	}
+
+	& span:last-child {
+		font-size: 48px;
+		line-height: 24px;
+		color: #46A962;
+	}
+}
