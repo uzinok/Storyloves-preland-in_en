@@ -98,12 +98,8 @@ export function styles() {
 			postUrl({
 				assetsPath: '../'
 			}),
-			autoprefixer(),
-			csso()
+			autoprefixer()
 		]))
-		.pipe(rename({
-			suffix: '.min'
-		}))
 		.pipe(dest(paths.styles.dest, {
 			sourcemaps: '.'
 		}))
@@ -113,10 +109,6 @@ export function styles() {
 export function html() {
 	return src(paths.html.src)
 		.pipe(nunjucksCompile())
-		.pipe(htmlmin({
-			removeComments: false,
-			collapseWhitespace: true
-		}))
 		.pipe(dest(paths.html.dest))
 		.pipe(browserSync.stream());
 }
