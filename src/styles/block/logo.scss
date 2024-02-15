@@ -6,6 +6,10 @@
 	text-decoration: none;
 	height: 45px;
 
+	&:hover {
+		opacity: 0.75;
+	}
+
 	& span {
 		display: block;
 	}
