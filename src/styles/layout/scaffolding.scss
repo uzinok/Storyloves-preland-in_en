@@ -34,11 +34,16 @@ a:active {
 }
 
 .content {
-	& > h1 {
+	& header h1 {
 		margin: 0 0 15px;
 		font-weight: 700;
 		font-size: 35px;
 		line-height: 40px;
+
+		@media (min-width: $min-lg) {
+			font-size: 42px;
+			line-height: 50px;
+		}
 	}
 
 	& > p {
@@ -48,7 +53,13 @@ a:active {
 	& > img {
 		display: block;
 		margin: 0 0 25px;
+
+		@media (min-width: $min-xl) {
+			margin-right: 20px;
+			margin-left: 20px;
+		}
 	}
+
 }
 
 .hashtag-wrap {
@@ -132,7 +143,7 @@ a:active {
 
 .banner {
 	position: relative;
-	max-width: 745px;
+	max-width: 620px;
 	margin-bottom: 25px;
 	padding: 41px 15px 39px;
 	color: #ffffff;
@@ -223,6 +234,7 @@ a:active {
 }
 
 .main__footer {
+	max-width: 737px;
 	margin-right: -14px;
 	margin-left: -14px;
 	padding-top: 18px;
@@ -239,7 +251,7 @@ a:active {
 		margin-bottom: 26px;
 	}
 
-	& .logo {
+	.main__footer-logo {
 		margin-right: auto;
 		margin-bottom: 16px;
 		margin-left: auto;
@@ -249,8 +261,19 @@ a:active {
 			margin-bottom: 0;
 			margin-left: 0;
 		}
+
+		& span:first-child {
+			font-size: 13px;
+			line-height: 8px;
+		}
+
+		& span:last-child {
+			font-size: 31px;
+			line-height: 8px;
+		}
 	}
 }
+
 
 .main__footer-content {
 	padding: 19px 14px 21px;
@@ -262,6 +285,11 @@ a:active {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		text-align: initial;
+	}
+
+	@media (min-width: $min-lg) {
+		padding: 19px 34px 21px 14px;
 	}
 
 	& p {
@@ -316,20 +344,22 @@ a:active {
 @media (min-width: $min-lg) {
 	.main__container {
 		max-width: 780px;
+
+		margin-left: 0;
 	}
 }
 
 .ac_footer {
 	padding-bottom: 69px;
-	font-weight: 500!important;
-	font-size: 16px!important;
-	line-height: 187%!important;
-	font-family: "Montserrat", Arial, Helvetica, sans-serif!important;
+	font-weight: 500 !important;
+	font-size: 16px !important;
+	line-height: 187% !important;
+	font-family: "Montserrat", Arial, Helvetica, sans-serif !important;
 	text-align: center;
-	color: #46a962!important;
+	color: #46a962 !important;
 
 	& a {
-		font-weight: 600!important;
-		color: #46a962!important;
+		font-weight: 600 !important;
+		color: #46a962 !important;
 	}
 }
